@@ -1,0 +1,414 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema":{
+        "Pravapis": {
+            "AllowValues": "Афіцыйны правапіс, Клясычны правапіс",
+            "Default": "Афіцыйны правапіс"
+        },
+        "Sryft": {
+            "AllowValues": "Афіцыйны, Афіцыйны дапрацаваны, Альтэрнатыўны",
+            "Default": "Альтэрнатыўны"
+        }
+    },
+    "DynamicTokens": [
+        {
+            "Name": "Pravapis_list",
+            "Value": "1",
+            "When": { "Pravapis": "Афіцыйны правапіс" }
+        },
+
+        {
+            "Name": "Pravapis_list",
+            "Value": "2",
+            "When": { "Pravapis": "Клясычны правапіс" }
+        },
+        {
+            "Name": "Sryft_list",
+            "Value": "1",
+            "When": { "Sryft": "Афіцыйны" }
+        },
+
+        {
+            "Name": "Sryft_list",
+            "Value": "2",
+            "When": { "Sryft": "Афіцыйны дапрацаваны" }
+        },
+        {
+            "Name": "Sryft_list",
+            "Value": "3",
+            "When": { "Sryft": "Альтэрнатыўны" }
+        }
+
+    ],
+    "Changes": [
+
+        {
+            "Action": "EditData",
+            "Target": "Data/AdditionalLanguages",
+            "Entries": {
+                "nicetrojan.Belarusian": {
+                    "ID": "nicetrojan.Belarusian",
+                    "LanguageCode": "be",
+                    "ButtonTexture": "Mods/Belarusian/Button",
+                    "UseLatinFont": false,
+                    "FontFile": "{{InternalAssetKey: assets/Alternative_font/Fonts/Belarusian.fnt}}",
+                    "UseGenderedCharacterTranslations": true,
+                    "FontApplyYOffset": true,
+                    "FontPixelZoom": 0.5,
+                    "TimeFormat": "[HOURS_24_00]:[MINUTES]",
+                    "ClockTimeFormat": "[HOURS_24_00]:[MINUTES]",
+                    "ClockDateFormat": "[DAY_OF_WEEK] [DAY_OF_MONTH]"
+                }
+            },
+            "When": { "Sryft_list": 3 }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/AdditionalLanguages",
+            "Entries": {
+                "nicetrojan.Belarusian": {
+                    "ID": "nicetrojan.Belarusian",
+                    "LanguageCode": "be",
+                    "ButtonTexture": "Mods/Belarusian/Button",
+                    "UseLatinFont": true,
+                    "UseGenderedCharacterTranslations": true,
+                    "FontApplyYOffset": true,
+                    "FontPixelZoom": 0.5,
+                    "TimeFormat": "[HOURS_24_00]:[MINUTES]",
+                    "ClockTimeFormat": "[HOURS_24_00]:[MINUTES]",
+                    "ClockDateFormat": "[DAY_OF_WEEK] [DAY_OF_MONTH]"
+                }
+            },
+            "When": {"Sryft_list": 2 }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/AdditionalLanguages",
+            "Entries": {
+                "nicetrojan.Belarusian": {
+                    "ID": "nicetrojan.Belarusian",
+                    "LanguageCode": "be",
+                    "ButtonTexture": "Mods/Belarusian/Button",
+                    "UseLatinFont": true,
+                    "UseGenderedCharacterTranslations": true,
+                    "FontApplyYOffset": true,
+                    "FontPixelZoom": 0.5,
+                    "TimeFormat": "[HOURS_24_00]:[MINUTES]",
+                    "ClockTimeFormat": "[HOURS_24_00]:[MINUTES]",
+                    "ClockDateFormat": "[DAY_OF_WEEK] [DAY_OF_MONTH]"
+                }
+            },
+            "When": {"Sryft_list": 1 }
+        },
+
+        // Mod's Language Button
+
+        {
+            "Action": "Load",
+            "Target": "Mods/Belarusian/Button",
+            "FromFile": "assets/button.png"
+        },
+
+        // Mod's Fonts alternative
+
+        {
+			"LogName": "Fonts FNT ALT",
+            "Action": "Load",
+            "Target": "Fonts/Belarusian",
+            "FromFile": "assets/Alternative_font/{{Target}}.fnt",
+            "Priority": "High",
+            "When": {"Language": "be", "Sryft": "Альтэрнатыўны"}
+        },
+        {
+			"LogName": "Fonts PNG ALT",
+            "Action": "Load",
+            "Target": "Fonts/Belarusian",
+            "FromFile": "assets/Alternative_font/{{Target}}.png",
+            "Priority": "High",
+            "When": {"Language": "be", "Sryft": "Альтэрнатыўны"}
+        },
+        {
+            "LogName": "Fonts XNB AF",
+            "Action": "Load",
+            "Target": "Fonts/SmallFont, Fonts/SpriteFont1",
+            "FromFile": "assets/Alternative_font/{{Target}}.xnb",
+            "Priority": "High",
+            "When": {"Language": "be", "Sryft": "Альтэрнатыўны"}
+        },
+        // Mod's Fonts official
+		{
+            "LogName": "Fonts XNB AF",
+            "Action": "Load",
+            "Target": "Fonts/SmallFont, Fonts/SpriteFont1",
+            "FromFile": "assets/Official_font/{{Target}}.xnb",
+            "Priority": "High",
+            "When": {"Language": "be", "Sryft": "Афіцыйны"}
+        },
+
+        // Mod's Fonts official enchanced
+		{
+            "LogName": "Fonts XNB AD",
+            "Action": "Load",
+            "Target": "Fonts/SmallFont, Fonts/SpriteFont1",
+            "FromFile": "assets/Official_enchanced_font/{{Target}}.xnb",
+            "Priority": "High",
+            "When": {"Language": "be", "Sryft": "Афіцыйны дапрацаваны"}
+        },
+        {
+            "LogName": "Fonts PNG AD",
+            "Action": "Load",
+            "Target": "LooseSprites/font_bold, LooseSprites/font_colored",
+            "FromFile": "assets/Official_enchanced_font/{{Target}}.png",
+            "Priority": "High",
+            "When": {"Language": "be", "Sryft": "Афіцыйны дапрацаваны"}
+        },
+
+        // Sprite Translation aficyjny
+
+        {
+            "LogName": "Minigames AF",
+            "Action": "Load",
+            "Target": "Minigames/Intro, Minigames/jojacorps, Minigames/TitleButtons, Minigames/Xb1ProfileButton",
+            "FromFile": "assets/aficyjny/{{Target}}.png",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Loose Sprites AF",
+            "Action": "Load",
+            "Target": "LooseSprites/Billboard, LooseSprites/ControllerMaps, LooseSprites/CraneGame, LooseSprites/Cursors, LooseSprites/JojaCDForm, LooseSprites/JunimoNote, LooseSprites/Movies",
+            "FromFile": "assets/aficyjny/{{Target}}.png",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Tilesheets AF",
+            "Action": "Load",
+            "Target": "Maps/bathhouse_tiles, Maps/coopTiles, Maps/DesertTiles, Maps/fall_beach, Maps/fall_outdoorsTileSheet, Maps/fall_town, Maps/Festivals, Maps/spring_beach, Maps/spring_outdoorsTileSheet, Maps/spring_town, Maps/springobjects, Maps/summer_beach, Maps/summer_outdoorsTileSheet, Maps/summer_town, Maps/TownIndoors, Maps/townInterior, Maps/winter_beach, Maps/winter_outdoorsTileSheet, Maps/winter_town, Maps/stadium_tiles, Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/aficyjny/{{Target}}.png",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        // Sprite Translation klasyczny
+
+        {
+            "LogName": "Minigames KL",
+            "Action": "Load",
+            "Target": "Minigames/Intro, Minigames/jojacorps, Minigames/TitleButtons, Minigames/Xb1ProfileButton",
+            "FromFile": "assets/klasyczny/{{Target}}.png",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Loose Sprites KL",
+            "Action": "Load",
+            "Target": "LooseSprites/Billboard, LooseSprites/ControllerMaps, LooseSprites/CraneGame, LooseSprites/Cursors, LooseSprites/JojaCDForm, LooseSprites/JunimoNote, LooseSprites/Movies",
+            "FromFile": "assets/klasyczny/{{Target}}.png",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Tilesheets KL",
+            "Action": "Load",
+            "Target": "Maps/bathhouse_tiles, Maps/coopTiles, Maps/DesertTiles, Maps/fall_beach, Maps/fall_outdoorsTileSheet, Maps/fall_town, Maps/Festivals, Maps/spring_beach, Maps/spring_outdoorsTileSheet, Maps/spring_town, Maps/springobjects, Maps/summer_beach, Maps/summer_outdoorsTileSheet, Maps/summer_town, Maps/TownIndoors, Maps/townInterior, Maps/winter_beach, Maps/winter_outdoorsTileSheet, Maps/winter_town, Maps/stadium_tiles, Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/klasyczny/{{Target}}.png",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        // Text Translation aficyjny
+
+        {
+            "LogName": "Credits AF",
+            "Action": "Load",
+            "Target": "Strings/credits",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Dialogue AF",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/Abigail, Characters/Dialogue/Alex, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Elliott, Characters/Dialogue/Emily, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gil, Characters/Dialogue/Gus, Characters/Dialogue/Haley, Characters/Dialogue/Harvey, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leah, Characters/Dialogue/Lewis, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/MarriageDialogue, Characters/Dialogue/MarriageDialogueAbigail, Characters/Dialogue/MarriageDialogueAlex, Characters/Dialogue/MarriageDialogueElliott, Characters/Dialogue/MarriageDialogueEmily, Characters/Dialogue/MarriageDialogueHaley, Characters/Dialogue/MarriageDialogueHarvey, Characters/Dialogue/MarriageDialogueKrobus, Characters/Dialogue/MarriageDialogueLeah, Characters/Dialogue/MarriageDialogueMaru, Characters/Dialogue/MarriageDialoguePenny, Characters/Dialogue/MarriageDialogueSam, Characters/Dialogue/MarriageDialogueSebastian, Characters/Dialogue/MarriageDialogueShane, Characters/Dialogue/Maru, Characters/Dialogue/Mister Qi, Characters/Dialogue/Pam, Characters/Dialogue/Penny, Characters/Dialogue/Pierre, Characters/Dialogue/rainy, Characters/Dialogue/Robin, Characters/Dialogue/Sam, Characters/Dialogue/Sandy, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Leo, Characters/Dialogue/LeoMainland",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Various Data AF",
+            "Action": "Load",
+            "Target": "Data/Achievements, Data/Boots, Data/Bundles, Data/EngagementDialogue, Data/ExtraDialogue, Data/hats, Data/mail, Data/Monsters, Data/NPCGiftTastes, Data/Quests, Data/SecretNotes",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Events AF",
+            "Action": "Load",
+            "Target": "Data/Events/AbandonedJojaMart, Data/Events/AnimalShop, Data/Events/ArchaeologyHouse, Data/Events/Backwoods, Data/Events/BathHouse_Pool, Data/Events/Beach, Data/Events/BusStop, Data/Events/CommunityCenter, Data/Events/ElliottHouse, Data/Events/Farm, Data/Events/FarmHouse, Data/Events/Forest, Data/Events/HaleyHouse, Data/Events/HarveyRoom, Data/Events/Hospital, Data/Events/JoshHouse, Data/Events/LeahHouse, Data/Events/ManorHouse, Data/Events/Mine, Data/Events/Mountain, Data/Events/Railroad, Data/Events/Saloon, Data/Events/SamHouse, Data/Events/SandyHouse, Data/Events/ScienceHouse, Data/Events/SebastianRoom, Data/Events/SeedShop, Data/Events/Sewer, Data/Events/Sunroom, Data/Events/Temp, Data/Events/Town, Data/Events/Trailer, Data/Events/Trailer_big, Data/Events/WizardHouse, Data/Events/Woods, Data/Events/BoatTunnel, Data/Events/IslandHut, Data/Events/IslandNorth, Data/Events/IslandSouth, Data/Events/IslandWest, Data/Events/QiNutRoom, Data/Events/FishShop, Data/Events/DesertFestival",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "TV Channels AF",
+            "Action": "Load",
+            "Target": "Data/TV/CookingChannel, Data/TV/TipChannel",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Festivals AF",
+            "Action": "Load",
+            "Target": "Data/Festivals/fall16, Data/Festivals/fall27, Data/Festivals/FestivalDates, Data/Festivals/spring13, Data/Festivals/spring24, Data/Festivals/summer11, Data/Festivals/summer28, Data/Festivals/winter25, Data/Festivals/winter8",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Schedule Strings AF",
+            "Action": "Load",
+            "Target": "Strings/schedules/Abigail, Strings/schedules/Alex, Strings/schedules/Sandy, Strings/schedules/Caroline, Strings/schedules/Clint, Strings/schedules/Demetrius, Strings/schedules/Elliott, Strings/schedules/Emily, Strings/schedules/Evelyn, Strings/schedules/George, Strings/schedules/Gus, Strings/schedules/Haley, Strings/schedules/Harvey, Strings/schedules/Jas, Strings/schedules/Jodi, Strings/schedules/Leah, Strings/schedules/Lewis, Strings/schedules/Linus, Strings/schedules/Marnie, Strings/schedules/Maru, Strings/schedules/Pam, Strings/schedules/Penny, Strings/schedules/Pierre, Strings/schedules/Robin, Strings/schedules/Sam, Strings/schedules/Sebastian, Strings/schedules/Shane, Strings/schedules/Vincent, Strings/schedules/Willy, Strings/schedules/Leo",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        {
+            "LogName": "Other Strings AF",
+            "Action": "Load",
+            "Target": "Strings/1_6_Strings, Strings/animationDescriptions, Strings/BigCraftables, Strings/Buildings, Strings/BundleNames, Strings/Characters, Strings/EnchantmentNames, Strings/Events, Strings/FarmAnimals, Strings/Furniture, Strings/Lexicon, Strings/Locations, Strings/MovieConcessions, Strings/MovieReactions, Strings/Movies, Strings/Notes, Strings/NPCNames, Strings/Objects, Strings/Pants, Strings/Quests, Strings/Shirts, Strings/SimpleNonVillagerDialogues, Strings/SpecialOrderStrings, Strings/SpeechBubbles, Strings/StringsFromCSFiles, Strings/StringsFromMaps, Strings/UI, Strings/Weapons, Strings/WorldMap, Strings/Tools",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+            "When": { "Language": "be", "Pravapis": "Афіцыйны правапіс"}
+        },
+
+        // Text Translation klasyczny
+
+        {
+            "LogName": "Credits KL",
+            "Action": "Load",
+            "Target": "Strings/credits",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Dialogue KL",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/Abigail, Characters/Dialogue/Alex, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Elliott, Characters/Dialogue/Emily, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gil, Characters/Dialogue/Gus, Characters/Dialogue/Haley, Characters/Dialogue/Harvey, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leah, Characters/Dialogue/Lewis, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/MarriageDialogue, Characters/Dialogue/MarriageDialogueAbigail, Characters/Dialogue/MarriageDialogueAlex, Characters/Dialogue/MarriageDialogueElliott, Characters/Dialogue/MarriageDialogueEmily, Characters/Dialogue/MarriageDialogueHaley, Characters/Dialogue/MarriageDialogueHarvey, Characters/Dialogue/MarriageDialogueKrobus, Characters/Dialogue/MarriageDialogueLeah, Characters/Dialogue/MarriageDialogueMaru, Characters/Dialogue/MarriageDialoguePenny, Characters/Dialogue/MarriageDialogueSam, Characters/Dialogue/MarriageDialogueSebastian, Characters/Dialogue/MarriageDialogueShane, Characters/Dialogue/Maru, Characters/Dialogue/Mister Qi, Characters/Dialogue/Pam, Characters/Dialogue/Penny, Characters/Dialogue/Pierre, Characters/Dialogue/rainy, Characters/Dialogue/Robin, Characters/Dialogue/Sam, Characters/Dialogue/Sandy, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Leo, Characters/Dialogue/LeoMainland",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Various Data KL",
+            "Action": "Load",
+            "Target": "Data/Achievements, Data/Boots, Data/Bundles, Data/EngagementDialogue, Data/ExtraDialogue, Data/hats, Data/mail, Data/Monsters, Data/NPCGiftTastes, Data/Quests, Data/SecretNotes",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Events KL",
+            "Action": "Load",
+            "Target": "Data/Events/AbandonedJojaMart, Data/Events/AnimalShop, Data/Events/ArchaeologyHouse, Data/Events/Backwoods, Data/Events/BathHouse_Pool, Data/Events/Beach, Data/Events/BusStop, Data/Events/CommunityCenter, Data/Events/ElliottHouse, Data/Events/Farm, Data/Events/FarmHouse, Data/Events/Forest, Data/Events/HaleyHouse, Data/Events/HarveyRoom, Data/Events/Hospital, Data/Events/JoshHouse, Data/Events/LeahHouse, Data/Events/ManorHouse, Data/Events/Mine, Data/Events/Mountain, Data/Events/Railroad, Data/Events/Saloon, Data/Events/SamHouse, Data/Events/SandyHouse, Data/Events/ScienceHouse, Data/Events/SebastianRoom, Data/Events/SeedShop, Data/Events/Sewer, Data/Events/Sunroom, Data/Events/Temp, Data/Events/Town, Data/Events/Trailer, Data/Events/Trailer_big, Data/Events/WizardHouse, Data/Events/Woods, Data/Events/BoatTunnel, Data/Events/IslandHut, Data/Events/IslandNorth, Data/Events/IslandSouth, Data/Events/IslandWest, Data/Events/QiNutRoom, Data/Events/FishShop, Data/Events/DesertFestival",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "TV Channels KL",
+            "Action": "Load",
+            "Target": "Data/TV/CookingChannel, Data/TV/TipChannel",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Festivals KL",
+            "Action": "Load",
+            "Target": "Data/Festivals/fall16, Data/Festivals/fall27, Data/Festivals/FestivalDates, Data/Festivals/spring13, Data/Festivals/spring24, Data/Festivals/summer11, Data/Festivals/summer28, Data/Festivals/winter25, Data/Festivals/winter8",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Schedule Strings KL",
+            "Action": "Load",
+            "Target": "Strings/schedules/Abigail, Strings/schedules/Alex, Strings/schedules/Sandy, Strings/schedules/Caroline, Strings/schedules/Clint, Strings/schedules/Demetrius, Strings/schedules/Elliott, Strings/schedules/Emily, Strings/schedules/Evelyn, Strings/schedules/George, Strings/schedules/Gus, Strings/schedules/Haley, Strings/schedules/Harvey, Strings/schedules/Jas, Strings/schedules/Jodi, Strings/schedules/Leah, Strings/schedules/Lewis, Strings/schedules/Linus, Strings/schedules/Marnie, Strings/schedules/Maru, Strings/schedules/Pam, Strings/schedules/Penny, Strings/schedules/Pierre, Strings/schedules/Robin, Strings/schedules/Sam, Strings/schedules/Sebastian, Strings/schedules/Shane, Strings/schedules/Vincent, Strings/schedules/Willy, Strings/schedules/Leo",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+			"Priority": "High",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        {
+            "LogName": "Other Strings KL",
+            "Action": "Load",
+            "Target": "Strings/1_6_Strings, Strings/animationDescriptions, Strings/BigCraftables, Strings/Buildings, Strings/BundleNames, Strings/Characters, Strings/EnchantmentNames, Strings/Events, Strings/FarmAnimals, Strings/Furniture, Strings/Lexicon, Strings/Locations, Strings/MovieConcessions, Strings/MovieReactions, Strings/Movies, Strings/Notes, Strings/NPCNames, Strings/Objects, Strings/Pants, Strings/Quests, Strings/Shirts, Strings/SimpleNonVillagerDialogues, Strings/SpecialOrderStrings, Strings/SpeechBubbles, Strings/StringsFromCSFiles, Strings/StringsFromMaps, Strings/UI, Strings/Weapons, Strings/WorldMap, Strings/Tools",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+            "When": { "Language": "be", "Pravapis": "Клясычны правапіс"}
+        },
+
+        // Junimo Font
+
+	    {
+            "LogName": "Junimo Font Bundles AF",
+            "Action": "Load",
+            "Target": "Data/Bundles",
+            "FromFile": "assets/aficyjny/{{Target}} (be).json",
+            "When": { "Language": "be", "HasFlag": "canReadJunimoText", "Pravapis": "Афіцыйны правапіс"}
+        },
+        {
+            "LogName": "Junimo Font Bundles KL",
+            "Action": "Load",
+            "Target": "Data/Bundles",
+            "FromFile": "assets/klasyczny/{{Target}} (be).json",
+            "When": { "Language": "be", "HasFlag": "canReadJunimoText", "Pravapis": "Клясычны правапіс"}
+        },
+
+	    {
+            "LogName": "Junimo Font Locations",
+            "Action": "EditData",
+            "Target": "Strings/Locations",
+            "Entries": {
+                "CommunityCenter_AreaName_CraftsRoom": "Майстэрня"
+            },
+            "When": { "Language": "be", "HasFlag": "canReadJunimoText"}
+        },
+
+        {
+            "LogName": "Junimo Font StringsFromCSFiles",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Junimo.cs.6625": "Бвай!",
+                "Junimo.cs.6626": "Бвай Пкуль!",
+                "JunimoNoteMenu.cs.10786": "Мы    Джуніма    рады дапамагчы    табе. Узамен    просім дароў    даліны. Калі ты    прасякнешся   ляснымі чарамі    то ўбачыш    сапраўдную    прыроду    гэтага скрутка."
+            },
+            "When": { "Language": "be", "HasFlag": "canReadJunimoText"}
+        },
+
+        {
+            "LogName": "Junimo Font Characters",
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries": {
+                "JunimoTextAboveHead1": "Джуніма!",
+                "JunimoTextAboveHead2": "Зорка!",
+                "JunimoThankYou1": "Дзякуй!",
+                "JunimoThankYou2": "Падарунак!"
+            },
+            "When": { "Language": "be", "HasFlag": "canReadJunimoText"}
+        }
+    ]
+}

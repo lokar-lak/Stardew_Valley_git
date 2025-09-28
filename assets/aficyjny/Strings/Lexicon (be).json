@@ -1,0 +1,22 @@
+{
+    "RandomNegativeItemNoun": "смецце#адкіды#барахло#пацяруха#хлам",
+    "RandomPositiveAdjective_Child": "круты#вясёлы#класны#мілы#слаўны#удалы#файны",
+    "RandomPositiveAdjective_AdultMale": "цікавы#слаўны#класны#вясёлы#файны#выдатны",
+    "RandomPositiveAdjective_AdultFemale": "цудоўная#надзвычайная#абаяльная#чароўная#неймаверная#мілая#цікаўная#прыўдалая",
+    "RandomPositiveAdjective_PlaceOrEvent": "цудоўны#надзвычайны#абаяльны#чароўны#неймаверны#мілы#цікаўны#прыўдалы",
+    "RandomDeliciousAdjective": "смачна#сакавіта#цудоўна#наедна#сытна#далікатна#апетытна#прыўдала",
+    "RandomDeliciousAdjective_Child": "смачна",
+    "RandomNegativeFoodAdjective_Child": "агідна",
+    "RandomNegativeFoodAdjective_Polite": "...цікава#...незвычайна#...асаблівы#...неардынарны",
+    "RandomNegativeFoodAdjective": "брыдота#гадасць#жахліва#брыдка#агідна#гідота#паскудна#гадка#гадліва#смуродна#гідасна#гніла",
+    "RandomSlightlyPositiveFoodAdjective": "нядрэнна#смачна#ядома",
+    "ChildTerm_Male": "хлопчык",
+    "ChildTerm_Female": "дзяўчынка",
+    "Pronoun_Male": "яго",
+    "Pronoun_Female": "яе",
+    "QuestionDialogue_Yes": "Так",
+    "QuestionDialogue_No": "Не",
+    "GenericPlayerTerm": "фермер",
+    "Possessive_Pronoun_Male": "ягоны",
+    "Possessive_Pronoun_Female": "ейны"
+}
