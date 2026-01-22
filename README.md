@@ -140,15 +140,27 @@ Danielle Tłumač - аўтарка папраўленага шрыфту
 
 </details>
 <details>
-  <summary>Android</summary>
+<summary>Android</summary>
 
-1. Спампуйце [SMAPI Launcher APK](https://github.com/NRTnarathip/SMAPILoader/releases) (файл мусіць называцца прыкладна так: ***SMAPI.Launcher.vx.x.x.apk***)
-2. [Усталюйце спампаваны лаўнчар](https://www.greenbot.com/article/2452614/how-to-sideload-an-app-onto-your-android-phone-or-tablet.html)
-3. Спампуйце [SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases) (файл мусіць называцца прыкладна так: ***SMAPI.4.x.x-xxxx.zip***)
-4. Запусціце лаўнчар SMAPI. Націсніце кнопку "Install SMAPI From Zip" (Усталяваць SMAPI з ZIP архіву)
-5. Выберыце спампаваны файл SMAPІ. Пачакайце, пакуль лаўнчар не паведаміць, што SMAPI паспяхова ўсталяваны.
-6. Націсніце "Start Game" (Пачаць гульню). Цяпер запускаць Stardew Valley трэба будзе пра гэты лаўнчар.
-7. Больш дакладную інструкцыю можна прачытаць на афіцыяльнай [wiki](https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Android).
+<span style="color:#f1c40f">[!] Усталяванне на Android адрозніваецца ад усталявання на іншых платформах.</span>
+
+**Неабходныя файлы:**
+
+- [Лаўнчар SMAPI](https://github.com/NRTnarathip/SMAPILoader/releases)
+- [ZIP архіў SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases)
+- [Беларусізатар](https://mega.nz/folder/LuwHVQyB#GOsLjoFvrYdbW-slKhz11w)
+- [Content Patcher](https://www.curseforge.com/stardewvalley/mods/content-patcher)
+
+1. Спампуйце лаўнчар [SMAPI Launcher APK](https://github.com/NRTnarathip/SMAPILoader/releases) (файл мусіць называцца прыкладна так: **_SMAPI.Launcher.vx.x.x.apk_**)
+2. Усталюйце спампаваны лаўнчар. Калі ў вас узніклі праблемы, можаце скарыстацца гэтым [дапаможнікам](https://www.greenbot.com/article/2452614/how-to-sideload-an-app-onto-your-android-phone-or-tablet.html) (англ).
+3. Спампуйце ZIP архіў [SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases) (файл мусіць называцца прыкладна так: **_SMAPI.4.x.x-xxxx.zip_**)
+4. Запусціце лаўнчар SMAPI (SMAPI Launcher APK). Націсніце кнопку **"Install SMAPI From Zip"** (Усталяваць SMAPI з ZIP архіву).
+5. Выберыце спампаваны архіў SMAPІ. Пачакайце, пакуль лаўнчар не паведаміць, што SMAPI паспяхова ўсталяваны.
+6. Спампуйце **Беларусізатар** і **Content Patcher**
+7. Націсніце ў лаўнчары кнопку **Mod manager** (Менеджар модаў) → **Install Mod** (Усталяваць мод). Выберыце па чарзе архіў модам **Content Patcher і** архіў з **беларусізатарам**.
+8. Націсніце **"Start Game"** (Пачаць гульню). Цяпер запускаць Stardew Valley трэба будзе пра гэты лаўнчар.
+9. Больш дакладную інструкцыю можна прачытаць на афіцыяльнай [wiki](https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Android).
+
 </details>
 <details>
   <summary>Linux</summary>
@@ -348,13 +360,22 @@ Danielle Tłumač - авторка исправленного шрифта
 <details>
 <summary>Android</summary>
 
-1. Скачайте [SMAPI Launcher APK](https://github.com/NRTnarathip/SMAPILoader/releases) (файл должен называться примерно так: ***SMAPI.Launcher.vx.x.x.apk***)
-2. [Установите скачанный лаунчер](https://www.greenbot.com/article/2452614/how-to-sideload-an-app-onto-your-android-phone-or-tablet.html)
-3. Скачайте [SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases) (файл должен называться примерно так: ***SMAPI.4.x.x-xxxx.zip***)
-4. Запустите лаунчер SMAPI. Нажмите кнопку "Install SMAPI From Zip" (Установить SMAPI из ZIP архива)
-5. Выберите скачанный файл SMAPI. Подождите, пока лаунчер не сообщит, что SMAPI успешно установлен.
-6. Нажмите "Start Game" (Начать игру). Теперь запускать Stardew Valley нужно будет через этот лаунчер.
-7. Более подробную инструкцию можно прочитать на официальной [wiki](https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Android).
+<span style="color:#f1c40f">[!] Установка на Android отличается от установки на других платформах.</span>
+
+**Необходимые файлы:**
+- [Лаунчер SMAPI](https://github.com/NRTnarathip/SMAPILoader/releases)
+- [ZIP-архив SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases)
+- [Беларусізатар](https://mega.nz/folder/LuwHVQyB#GOsLjoFvrYdbW-slKhz11w)
+- [Content Patcher](https://www.curseforge.com/stardewvalley/mods/content-patcher)
+1. Скачайте [SMAPI Launcher APK](https://github.com/NRTnarathip/SMAPILoader/releases) (файл должен называться примерно так: **_SMAPI.Launcher.vx.x.x.apk_**)
+2. Установите скачанный лаунчер. Если возникнут проблемы, используйте это [руководство](https://www.greenbot.com/article/2452614/how-to-sideload-an-app-onto-your-android-phone-or-tablet.html) (на английском).
+3. Скачайте ZIP-архив [SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases) (файл должен называться примерно так: **_SMAPI.4.x.x-xxxx.zip_**)
+4. Запустите лаунчер SMAPI (SMAPI Launcher APK). Нажмите кнопку **"Install SMAPI From Zip"** (Установить SMAPI из ZIP-архива).
+5. Выберите скачанный архив SMAPI. Дождитесь, пока лаунчер сообщит, что SMAPI успешно установлен.
+6. Скачайте **Беларусізатар** и **Content Patcher**
+7. В лаунчере нажмите **Mod manager** (Менеджер модов) → **Install Mod** (Установить мод). Выберите по очереди архив мода **Content Patcher**, затем архив **Беларусізатара**.
+8. Нажмите **"Start Game"** (Начать игру). Теперь запускать Stardew Valley нужно через этот лаунчер.
+9. Более подробное руководство можно найти на официальной [вики](https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Android).
 </details>
 
 <details>
@@ -551,17 +572,28 @@ Inside there will be several files for installation on different systems. You ne
 > ~/.steam/steam/steamapps/common/Stardew Valley/Mods
 7. Installation is complete, you can launch the game as usual
 </details>
+
 <details>
   <summary>Android</summary>
 
-1. Download [SMAPI Launcher APK](https://github.com/NRTnarathip/SMAPILoader/releases) (the file should be named something like: ***SMAPI.Launcher.vx.x.x.apk***)
+<span style="color:#f1c40f">[!] Android installation differs from installation on other platforms.</span>
 
-2. [Install the downloaded launcher](https://www.greenbot.com/article/2452614/how-to-sideload-an-app-onto-your-android-phone-or-tablet.html)
-3. Download [SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases) (the file should be named something like: ***SMAPI.4.x.x-xxxx.zip***)
-4. Launch the SMAPI launcher. Click the "Install SMAPI From Zip" button (Install SMAPI from ZIP archive)
-5. Select the downloaded SMAPI file. Wait until the launcher reports that SMAPI is successfully installed.
-6. Click "Start Game" (Start the game). Now you need to launch Stardew Valley through this launcher.
-7. A more detailed guide can be found on the official [wiki](https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Android).
+**Required files:**
+
+- [SMAPI Launcher](https://github.com/NRTnarathip/SMAPILoader/releases)
+- [SMAPI ZIP archive](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases)
+- [Belarusizer](https://mega.nz/folder/LuwHVQyB#GOsLjoFvrYdbW-slKhz11w)
+- [Content Patcher](https://www.curseforge.com/stardewvalley/mods/content-patcher)
+
+1. Download the [SMAPI Launcher APK](https://github.com/NRTnarathip/SMAPILoader/releases) (the file should be named something like: **_SMAPI.Launcher.vx.x.x.apk_**)
+2. Install the downloaded launcher. If you encounter issues, use this [guide](https://www.greenbot.com/article/2452614/how-to-sideload-an-app-onto-your-android-phone-or-tablet.html) (English).
+3. Download the [SMAPI](https://github.com/NRTnarathip/SMAPI-Android-1.6/releases) ZIP archive (the file should be named something like: **_SMAPI.4.x.x-xxxx.zip_**)
+4. Launch the SMAPI launcher (SMAPI Launcher APK). Click the **"Install SMAPI From Zip"** button (Install SMAPI from ZIP archive).
+5. Select the downloaded SMAPI archive. Wait until the launcher reports that SMAPI is successfully installed.
+6. Download **Belarusizer** and **Content Patcher**
+7. In the launcher, click **Mod manager** (Mod Manager) → **Install Mod** (Install Mod). Select the **Content Patcher** mod archive and then the **Belarusizer** archive.
+8. Click **"Start Game"** (Start the game). Now you must launch Stardew Valley through this launcher.
+9. A more detailed guide can be found on the official [wiki](https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Android).
 
 </details>
 <details>
